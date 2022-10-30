@@ -1,12 +1,16 @@
 import pywhatkit
 import time
 
-group_id = 'JGQwzfeGh7z3sIIfYBk0JH' #https://chat.whatsapp.com/JGQwzfeGh7z3sIIfYBk0JH
-mes = 'pft,e'
+group_id = 'you group ID' #if you want group message
+# or 
+#mob = '+380967258867' #if you want private message
+
+mes = 'you message text'
 
 def send_message():
 
-	mobile = group_id
+	mobile = group_id 
+	# mobile = mob
 	message = mes
 	
 	def generate_time():
@@ -24,12 +28,12 @@ def send_message():
 
 	hour, minute = generate_time()
 
-	print(hour)
-	print(minute)
 
 	minute_a = minute+3
 
 	pywhatkit.sendwhatmsg_to_group(group_id=mobile, message=message, time_hour=hour, time_min=minute_a)
+	# pywhatkit.sendwhatmsg_instantly(phone_no=mobile, message=message, time_hour=hour, time_min=minute_a)
+	
 
 starttime=time.time()
 
@@ -44,52 +48,3 @@ if __name__ == '__main__':
 	main()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-'''
-import pywhatkit
-
-mobn = ['+380969413176', '+380937205205']
-#mob = '+380967258867'
-mes = 'test'
-
-
-
-
-def send_message():
-	for i in mobn:
-		mob = i
-	mobile = mob
-	message = mes
-
-	pywhatkit.sendwhatmsg_instantly(phone_no=mobile, message=message)
-
-def main():
-	send_message()
-
-
-if __name__ == '__main__':
-	main()
-
-'''
